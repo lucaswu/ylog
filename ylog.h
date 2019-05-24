@@ -61,9 +61,9 @@ class YLog{
 #else
     localtime_r(&sectime, &tmtime);
 #endif
-    this->of_ << tmtime.tm_year+1900 << '-' << tmtime.tm_mon+1 << '-' << tmtime.tm_mday << ' ';
-    this->of_ << tmtime.tm_hour << ':' << tmtime.tm_min << ':' << tmtime.tm_sec << ' ';
-    this->of_ << codefile << '(' << codeline << ") " << info << ":\n" << value << std::endl;
+    this->of_ << tmtime.tm_year+1900 << '-' << tmtime.tm_mon+1 << '-' << tmtime.tm_mday <<
+      ' ' << tmtime.tm_hour << ':' << tmtime.tm_min << ':' << tmtime.tm_sec <<
+      ' '<< codefile << '(' << codeline << ") " << info << ":\n" << value << std::endl;
     return;
   }
 };
