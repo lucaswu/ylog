@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "YLog.h"
+#include "ylog.h"
 int main(){
   //创建日志对象log1，如果文件存在则追加，日志输出下限级别为INFO级别
   YLog log1(YLog::INFO, "log1.txt", YLog::ADD);
